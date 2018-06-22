@@ -10,7 +10,7 @@ public class FirstRound {
 
 	private URL url;
 	private HttpURLConnection connection;
-	private String html;
+	private String html = "";
 
 	/**
 	 * Initializes the connection to the desired URL.
@@ -27,7 +27,6 @@ public class FirstRound {
 		} catch (IOException e) {
 			System.out.println("Tried to create a URL object with an invalid URL\n" + e);
 		}
-		html = "";
 		try {
 			Scanner in = new Scanner(connection.getInputStream());
 			while (in.hasNextLine()) {
